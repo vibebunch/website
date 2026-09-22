@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What the world can see | Vibe Bunch</title>
+<meta name="description" content="A live view of which Vibe Bunch repositories are visible to the public.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>What the world can see</h1>
+  <p class="tagline">A live look at our shared repositories, from the outside.</p>
+</header>
+
+<main>
+
+<section>
+  <p>
+    This page asks GitHub for our organization's repositories without signing in, which
+    means it sees exactly what a stranger sees. It is not a description of our settings.
+    It is the real answer, fetched fresh every time you load this page.
+  </p>
+  <p>
+    Anything missing from this list is private. Anything on it can be read by anyone,
+    including its full history.
+  </p>
+</section>
+
+<section>
+  <h2>Public repositories</h2>
+  <ul class="repos" id="repo-list"></ul>
+  <p class="status" id="status">Checking.</p>
+</section>
+
+<section>
+  <h2>Where the private things live</h2>
+  <p>
+    Meeting notes, the member list and host addresses live in the
+    <strong>clubhouse</strong> repository, which is private. You read it on GitHub while
+    signed in. That is why it will never appear on this page.
+  </p>
+  <p><a href="index.html">Back to the front page</a></p>
+</section>
+
+</main>
+
+<footer>
+  <p>Vibe Bunch, Longmont and Boulder, Colorado.</p>
+</footer>
+
+<script>
+// If the organization is ever renamed, this is the only line to change.
+const ORG = "vibebunch";
+
+const list = document.getElementById("repo-list");
+const status = document.getElementById("status");
+
+fetch(`https://api.github.com/orgs/${ORG}/repos?per_page=100&sort=updated`)
+  .then((res) => {
+    if (res.status === 404) throw new Error("no-org");
+    if (!res.ok) throw new Error("http-" + res.status);
+    return res.json();
+  })
+  .then((repos) => {
+    if (!repos.length) {
+      status.textContent = "Nothing is public yet.";
+      return;
+    }
+    status.textContent = `${repos.length} repository${repos.length === 1 ? "" : "s"} visible to anyone.`;
+    for (const repo of repos) {
+      const li = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = repo.html_url;
+      link.className = "name";
+      link.textContent = repo.name;
+      li.appendChild(link);
+      if (repo.description) {
+        const desc = document.createElement("span");
+        desc.className = "desc";
+        desc.textContent = repo.description;
+        li.appendChild(desc);
+      }
+      list.appendChild(li);
+    }
+  })
+  .catch((err) => {
+    if (err.message === "no-org") {
+      status.textContent = "The organization does not exist yet, so there is nothing public to show.";
+    } else {
+      status.textContent = "Could not reach GitHub just now. Try reloading in a minute.";
+    }
+  });
+</script>
+
+</body>
+</html>
