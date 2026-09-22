@@ -68,7 +68,8 @@ fetch(`https://api.github.com/orgs/${ORG}/repos?per_page=100&sort=updated`)
       status.textContent = "Nothing is public yet.";
       return;
     }
-    status.textContent = `${repos.length} repository${repos.length === 1 ? "" : "s"} visible to anyone.`;
+    const word = repos.length === 1 ? "repository" : "repositories";
+    status.textContent = `${repos.length} ${word} visible to anyone.`;
     for (const repo of repos) {
       const li = document.createElement("li");
       const link = document.createElement("a");
