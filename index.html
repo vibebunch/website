@@ -7,10 +7,23 @@
 <title>Vibe Bunch | Saturday Vibe Coding Brunch in Longmont and Boulder, Colorado</title>
 <meta name="description" content="A monthly Saturday brunch in Longmont and Boulder, Colorado, where locals build things with AI. Complete beginners and experienced developers both welcome.">
 
+<link rel="canonical" href="https://vibebunch.com/">
+<meta name="theme-color" content="#E3ECFB">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- What shows up when someone shares a link to this page -->
+<meta property="og:site_name" content="Vibe Bunch">
 <meta property="og:title" content="Vibe Bunch | Saturday vibe coding brunch in Longmont and Boulder">
 <meta property="og:description" content="A monthly Saturday brunch where locals build things with AI. Beginners welcome.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://vibebunch.com/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://vibebunch.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vibe Bunch: Saturday brunch for people building things with AI, in Longmont and Boulder, Colorado.">
+<meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -146,6 +159,32 @@
   <span>Built and edited by members. <a href="whats-public.html">What's public</a></span>
 </footer>
 
+<!-- Search engines read this to understand who we are. Rarely needs changing. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://vibebunch.com/#org",
+      "name": "Vibe Bunch",
+      "url": "https://vibebunch.com/",
+      "logo": "https://vibebunch.com/apple-touch-icon.png",
+      "description": "A vibe coding group in Longmont and Boulder, Colorado, meeting for brunch one Saturday a month to build things with AI.",
+      "areaServed": ["Longmont, Colorado", "Boulder, Colorado"],
+      "sameAs": ["https://github.com/vibebunch"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://vibebunch.com/#website",
+      "name": "Vibe Bunch",
+      "url": "https://vibebunch.com/",
+      "publisher": { "@id": "https://vibebunch.com/#org" }
+    }
+  ]
+}
+</script>
+
 <!-- Search engines read this to show the meeting in event results. Google handles one
      event per block, so add a separate block for each date. Town only, never a street
      address. -->
@@ -155,7 +194,17 @@
   "@type": "Event",
   "name": "Vibe Bunch vibe coding brunch",
   "description": "A monthly Saturday brunch in Longmont and Boulder, Colorado, where locals build things with AI. Beginners and experienced developers both welcome.",
+  "image": "https://vibebunch.com/og-image.png",
   "startDate": "2026-10-17T10:00:00-06:00",
+  "endDate": "2026-10-17T12:00:00-06:00",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://vibebunch.com/"
+  },
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "eventStatus": "https://schema.org/EventScheduled",
   "location": {
@@ -170,6 +219,7 @@
   },
   "organizer": {
     "@type": "Organization",
+    "@id": "https://vibebunch.com/#org",
     "name": "Vibe Bunch",
     "url": "https://vibebunch.com/"
   }

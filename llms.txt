@@ -1,0 +1,12 @@
+# Vibe Bunch
+
+> A monthly Saturday morning brunch in Longmont and Boulder, Colorado, where locals build things with AI assistance. Complete beginners and experienced developers are both welcome. Hosting rotates between members, and meeting addresses are shared privately with the group, never published.
+
+## Pages
+
+- [Home](https://vibebunch.com/): what the group is, how a morning goes, the next brunch date and town, projects members have built, and how to join.
+- [What the world can see](https://vibebunch.com/whats-public.html): a live list of the group's public GitHub repositories.
+
+## Source
+
+- [vibebunch/website on GitHub](https://github.com/vibebunch/website): the site's source, edited by members.
