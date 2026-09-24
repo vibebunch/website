@@ -4,60 +4,114 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Vibe Bunch | Vibe Coding in Longmont and Boulder, Colorado</title>
-<meta name="description" content="A vibe coding group meeting monthly in Longmont and Boulder, Colorado. We build small projects with AI assistance. Complete beginners and experienced developers both welcome.">
+<title>Vibe Bunch | Saturday Vibe Coding Brunch in Longmont and Boulder, Colorado</title>
+<meta name="description" content="A monthly Saturday brunch in Longmont and Boulder, Colorado, where locals build things with AI. Complete beginners and experienced developers both welcome.">
 
-<meta property="og:title" content="Vibe Bunch | Vibe Coding in Longmont and Boulder">
-<meta property="og:description" content="A monthly vibe coding group in Longmont and Boulder, Colorado. Beginners welcome.">
+<meta property="og:title" content="Vibe Bunch | Saturday vibe coding brunch in Longmont and Boulder">
+<meta property="og:description" content="A monthly Saturday brunch where locals build things with AI. Beginners welcome.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://vibebunch.com/">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>Vibe Bunch</h1>
-  <p class="tagline">A vibe coding group in Longmont and Boulder, Colorado.</p>
-</header>
+<div class="sky">
+  <nav class="nav">
+    <a class="logo" href="index.html">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+        <ellipse cx="17" cy="18" rx="15" ry="13" class="egg-white"/>
+        <circle cx="17" cy="18" r="6.5" class="egg-yolk"/>
+      </svg>
+      Vibe Bunch
+    </a>
+    <div class="nav-links">
+      <a href="#how">How it goes</a>
+      <a href="#built">Built at brunch</a>
+      <a class="button button-yolk" href="#join">Save me a seat</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-text">
+      <p class="stickers">
+        <span class="sticker">Beginners welcome</span>
+        <span class="sticker sticker-yolk">Longmont &amp; Boulder</span>
+      </p>
+      <h1>Saturday mornings are for making things.</h1>
+      <p class="lede">
+        A monthly brunch where locals build with AI. Some of us have written software for
+        years, some started last month, and everyone brings something to show.
+      </p>
+    </div>
+
+    <!-- TO CHANGE THE NEXT BRUNCH: edit the date, time and town below. Town only,
+         never a street address. Exact directions go to members in the group chat.
+         Also update the matching block at the bottom of this file for search engines. -->
+    <div class="next">
+      <time class="badge" datetime="2026-10-17">
+        <span class="badge-month">Oct</span>
+        <span class="badge-day">17</span>
+      </time>
+      <div class="next-text">
+        <span class="kicker">Next brunch</span>
+        <span class="next-when">Saturday, 10am</span>
+        <span>Longmont. The address goes to the group chat.</span>
+        <span class="small">Date to be confirmed</span>
+      </div>
+    </div>
+  </header>
+
+  <svg class="skyline" viewBox="0 0 1280 220" preserveAspectRatio="none" aria-hidden="true">
+    <path class="mountains" d="M0 220 L0 150 L120 120 L210 138 L300 96 L360 110 L420 60 L470 104 L520 40 L575 100 L630 30 L690 104 L760 84 L860 126 L980 98 L1090 132 L1180 110 L1280 128 L1280 220 Z"/>
+    <path class="ground" d="M0 220 L0 186 L160 168 L300 178 L460 150 L640 172 L820 150 L1000 170 L1160 156 L1280 166 L1280 220 Z"/>
+  </svg>
+</div>
 
 <main>
 
-<section>
-  <h2>What this is</h2>
-  <p>
-    We get together about once a month, take turns hosting, and build things with AI
-    assistance. Some of us have been writing software for years. Some of us started last
-    month. Both are welcome, and the mix is the point.
-  </p>
-  <p>
-    Sessions are informal. People bring whatever they are working on, we build, and we
-    show each other what worked and what did not.
-  </p>
+<section id="how" class="how">
+  <h2>How a morning goes</h2>
+  <div class="steps">
+    <div class="step step-cream">
+      <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><path d="M8 16h22v12a8 8 0 0 1-8 8h-6a8 8 0 0 1-8-8z"/><path d="M30 19h3a4 4 0 0 1 0 8h-3"/><path d="M15 6c0 3 3 3 3 6M22 6c0 3 3 3 3 6"/></svg>
+      <h3>Coffee and hellos</h3>
+      <p>Introductions, and a quick round of what everyone is working on.</p>
+    </div>
+    <div class="step step-sky">
+      <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect x="8" y="9" width="28" height="19" rx="2"/><path d="M4 34h36"/><path d="M17 16l-3 3 3 3M27 16l3 3-3 3"/></svg>
+      <h3>Laptops open</h3>
+      <p>Build something. Pair up, ask for help, or keep going on your own project.</p>
+    </div>
+    <div class="step step-peach">
+      <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><path d="M6 10h32v20H20l-8 7v-7H6z"/><path d="M14 18h16M14 23h10"/></svg>
+      <h3>Show and tell</h3>
+      <p>Show each other what worked, and what didn't. Half-broken demos count.</p>
+    </div>
+  </div>
+  <p class="note">A different member hosts each month, alternating Longmont and Boulder.</p>
 </section>
 
-<section>
-  <h2>Next meetings</h2>
-  <!-- TO ADD A MEETING: copy one <li> block and edit it. Keep the town, leave the
-       street address out. Exact directions go to members in WhatsApp. -->
-  <ul class="meetings">
-    <li>
-      <span class="date">Date to be confirmed</span>
-      <span class="place">Longmont, CO</span>
-    </li>
-    <li>
-      <span class="date">Date to be confirmed</span>
-      <span class="place">Boulder, CO</span>
-    </li>
-  </ul>
-  <p class="note">
-    Hosting rotates between members. The exact address goes out to the group before each
-    session.
-  </p>
+<section class="mix">
+  <h2>The mix is the point.</h2>
+  <div>
+    <h3>Started last month?</h3>
+    <p>You don't need to know how to code. Plenty of us learned by asking an AI and trying again.</p>
+  </div>
+  <div>
+    <h3>Writing software for years?</h3>
+    <p>Come for the new tools. Explaining what you know is the fastest way to learn it again.</p>
+  </div>
 </section>
 
-<section>
-  <h2>What we have built</h2>
+<section id="built" class="built">
+  <div class="section-head">
+    <h2>Built at brunch</h2>
+    <a href="https://github.com/vibebunch/website/edit/main/index.html">Add your project</a>
+  </div>
   <!-- TO ADD YOUR PROJECT: copy one <li> block, change the link, name and one line.
        Your project stays in your own GitHub account. This just points at it. -->
   <ul class="projects">
@@ -66,28 +120,30 @@
       <span class="by">by a member</span>
       <p>One line about what it does. Edit this file to add yours.</p>
     </li>
+    <li class="yours">
+      <strong>Yours next?</strong>
+      <p>Copy a card in this page's code and change the words. Your project stays in your own GitHub account.</p>
+    </li>
   </ul>
-  <p class="note">
-    Projects live in their members' own accounts. See
-    <a href="whats-public.html">what the world can see</a> of our shared repositories.
-  </p>
 </section>
 
-<section>
-  <h2>Joining</h2>
-  <p>
-    We are a small group and we are happy to grow. If you are in the Longmont or Boulder
-    area and this sounds like your kind of evening, get in touch and come to the next one.
-  </p>
-  <p>
-    You do not need experience. You do not need to bring a project. Turning up is enough.
-  </p>
+<section id="join" class="join">
+  <div>
+    <h2>There's room at the table.</h2>
+    <p>No experience needed and no project needed. Turning up is enough.</p>
+  </div>
+  <div class="join-action">
+    <!-- JOIN LINK: replace the href below with the group chat invite link. -->
+    <a class="button button-ink" href="#join">Join the group chat</a>
+    <p class="small">Hosts share the address a few days before.</p>
+  </div>
 </section>
 
 </main>
 
-<footer>
-  <p>Vibe Bunch, Longmont and Boulder, Colorado.</p>
+<footer class="site-footer">
+  <span>Vibe Bunch, Longmont and Boulder, Colorado</span>
+  <span>Built and edited by members. <a href="whats-public.html">What's public</a></span>
 </footer>
 
 <!-- Search engines read this to show the meeting in event results. Google handles one
@@ -97,8 +153,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Event",
-  "name": "Vibe Bunch vibe coding meetup",
-  "description": "A monthly vibe coding group in Longmont and Boulder, Colorado. Beginners and experienced developers both welcome.",
+  "name": "Vibe Bunch vibe coding brunch",
+  "description": "A monthly Saturday brunch in Longmont and Boulder, Colorado, where locals build things with AI. Beginners and experienced developers both welcome.",
   "startDate": "2026-10-17T10:00:00-06:00",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "eventStatus": "https://schema.org/EventScheduled",
