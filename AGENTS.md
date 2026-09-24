@@ -60,6 +60,27 @@ rather than quietly adding one.
 - **`.github/workflows/`** controls publishing.
 - Anything to do with DNS, which lives outside this repository entirely.
 
+## Search engines and link previews
+
+These files help people find the site and make shared links look right. Keep them in step
+with the pages.
+
+- **`sitemap.xml`** lists every page. When you change a page, set its `lastmod` to today.
+  When you add a page, add a `<url>` block for it.
+- **`llms.txt`** is a short plain-text guide to the site for AI assistants. Add new pages
+  to it as well.
+- **`robots.txt`** lets every crawler in, on purpose. Being found matters more to us than
+  keeping anyone out.
+- **Every page** carries a `<link rel="canonical">` pointing at its own address, plus the
+  `og:` tags that control link previews.
+- **`og-image.png`** (1200 by 630) is the picture shown when someone shares a link.
+  `apple-touch-icon.png` (180 by 180) is the home-screen icon. Their sources are in
+  `tools/`. Change the source, take a screenshot of it at the same size, and commit the PNG.
+- **The Event block** at the bottom of `index.html` must match the next meeting shown on
+  the page. Town only, never a street address.
+- **The long hex-named `.txt` file** in the top folder is the site's IndexNow key, which
+  lets us tell Bing about changes. It is meant to be public. Do not delete or rename it.
+
 ## How changes land
 
 Branch and pull request, never a direct commit to `main`. Write the pull request
