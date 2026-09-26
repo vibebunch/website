@@ -187,7 +187,8 @@
 
 <!-- Search engines read this to show the meeting in event results. Google handles one
      event per block, so add a separate block for each date. Town only, never a street
-     address. -->
+     address. "validFrom" is the day the meeting was announced. "performer" stays as the
+     group itself, never a person's name. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -203,7 +204,8 @@
     "price": "0",
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock",
-    "url": "https://vibebunch.com/"
+    "url": "https://vibebunch.com/",
+    "validFrom": "2026-09-21T00:00:00-06:00"
   },
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "eventStatus": "https://schema.org/EventScheduled",
@@ -222,6 +224,11 @@
     "@id": "https://vibebunch.com/#org",
     "name": "Vibe Bunch",
     "url": "https://vibebunch.com/"
+  },
+  "performer": {
+    "@type": "Organization",
+    "@id": "https://vibebunch.com/#org",
+    "name": "Vibe Bunch"
   }
 }
 </script>
