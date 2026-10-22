@@ -111,5 +111,13 @@ fetch(`https://api.github.com/orgs/${ORG}/repos?per_page=100&sort=updated`)
   });
 </script>
 
+<!-- Counts this visit for the members' visitor chart. No cookies, and nothing about you is
+     kept. privacy.html says exactly what is counted. Copy this block into any new page. -->
+<script>
+  if (location.hostname === "vibebunch.com" && navigator.sendBeacon) {
+    navigator.sendBeacon("https://members.vibebunch.com/hit", location.pathname);
+  }
+</script>
+
 </body>
 </html>

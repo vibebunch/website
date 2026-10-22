@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy | Vibe Bunch</title>
-<meta name="description" content="What Vibe Bunch keeps when you sign in to the members page, and what it doesn't.">
+<meta name="description" content="What Vibe Bunch counts when you visit, what it keeps when you sign in to the members page, and what it doesn't.">
 <link rel="canonical" href="https://vibebunch.com/privacy.html">
 <meta name="theme-color" content="#E3ECFB">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -25,7 +25,16 @@
 
 <section>
   <h2>This website</h2>
-  <p>vibebunch.com has no accounts, no forms and no tracking cookies. It is a plain page hosted on GitHub Pages.</p>
+  <p>vibebunch.com has no accounts, no forms and no cookies. It is a plain page hosted on GitHub Pages.</p>
+</section>
+
+<section>
+  <h2>Counting visits</h2>
+  <p>We count visits so members can see whether the site is useful. When a page opens, a short script sends one thing: which page it was, such as /privacy.html.</p>
+  <p>To count each visitor once a day without cookies, the counter scrambles your IP address and browser name together with a random value that changes daily. It keeps that scrambled code for the rest of the day. When the next day's first visit arrives, the code and that day's random value are deleted, so the code can't be traced back to you or matched to another day. The counter doesn't store your IP address.</p>
+  <p>What stays is totals: page views and visitors per day, and views per page. Nothing about where you are, what device you use or which link brought you here, and nothing is saved on your device.</p>
+  <p>If your browser sends Do Not Track or Global Privacy Control, or blocks scripts, you aren't counted at all.</p>
+  <p>The counter and the totals live on the members page, which runs on Cloudflare. Like any web host, Cloudflare sees your IP address when the script reaches it. Only members can see the totals.</p>
 </section>
 
 <section>
@@ -41,6 +50,14 @@
 </section>
 
 </main>
+
+<!-- Counts this visit for the members' visitor chart. No cookies, and nothing about you is
+     kept. privacy.html says exactly what is counted. Copy this block into any new page. -->
+<script>
+  if (location.hostname === "vibebunch.com" && navigator.sendBeacon) {
+    navigator.sendBeacon("https://members.vibebunch.com/hit", location.pathname);
+  }
+</script>
 
 </body>
 </html>
