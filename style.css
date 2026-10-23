@@ -267,6 +267,8 @@ ul.projects li.yours strong { font-family: var(--display); font-size: 1.6rem; }
 /* Phones and narrow windows */
 
 @media (max-width: 860px) {
+  /* The menu runs out of room here. Members stays reachable from the footer. */
+  .nav-members { display: none; }
   .hero { grid-template-columns: 1fr; gap: 32px; padding-top: 24px; padding-bottom: 130px; }
   .steps, ul.projects, .mix { grid-template-columns: 1fr; }
   .mix { padding: 36px 26px; gap: 26px; }
