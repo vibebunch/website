@@ -78,6 +78,10 @@ with the pages.
   `tools/`. Change the source, take a screenshot of it at the same size, and commit the PNG.
 - **The Event block** at the bottom of `index.html` must match the next meeting shown on
   the page. Town only, never a street address.
+- **The visit counter** is the short `<script>` block at the bottom of every page. It sends
+  the page's path to the members site, which keeps daily totals for the members' visitor
+  chart. Copy it into every new page. If you change what it sends, change `privacy.html`
+  in the same pull request, because that page says exactly what is counted.
 - **The long hex-named `.txt` file** in the top folder is the site's IndexNow key, which
   lets us tell Bing about changes. It is meant to be public. Do not delete or rename it.
 
