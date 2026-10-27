@@ -66,14 +66,14 @@
          never a street address. Exact directions go to members in the group chat.
          Also update the matching block at the bottom of this file for search engines. -->
     <div class="next">
-      <time class="badge" datetime="2026-10-24">
-        <span class="badge-month">Oct</span>
-        <span class="badge-day">24</span>
+      <time class="badge" datetime="2026-11-21">
+        <span class="badge-month">Nov</span>
+        <span class="badge-day">21</span>
       </time>
       <div class="next-text">
         <span class="kicker">Next brunch</span>
-        <span class="next-when">Saturday, 10am to 1pm</span>
-        <span>Longmont. The address goes to the group chat.</span>
+        <span class="next-when">Saturday, to be confirmed</span>
+        <span>Time and town to follow once we have a host.</span>
       </div>
     </div>
   </header>
@@ -186,53 +186,12 @@
 }
 </script>
 
-<!-- Search engines read this to show the meeting in event results. Google handles one
-     event per block, so add a separate block for each date. Town only, never a street
-     address. "validFrom" is the day the meeting was announced. "performer" stays as the
-     group itself, never a person's name. -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Event",
-  "name": "Vibe Bunch vibe coding brunch",
-  "description": "A monthly Saturday brunch in Longmont and Boulder, Colorado, where locals build things with AI. Beginners and experienced developers both welcome.",
-  "image": "https://vibebunch.com/og-image.png",
-  "startDate": "2026-10-24T10:00:00-06:00",
-  "endDate": "2026-10-24T13:00:00-06:00",
-  "isAccessibleForFree": true,
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock",
-    "url": "https://vibebunch.com/",
-    "validFrom": "2026-09-21T00:00:00-06:00"
-  },
-  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-  "eventStatus": "https://schema.org/EventScheduled",
-  "location": {
-    "@type": "Place",
-    "name": "Longmont, Colorado",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Longmont",
-      "addressRegion": "CO",
-      "addressCountry": "US"
-    }
-  },
-  "organizer": {
-    "@type": "Organization",
-    "@id": "https://vibebunch.com/#org",
-    "name": "Vibe Bunch",
-    "url": "https://vibebunch.com/"
-  },
-  "performer": {
-    "@type": "Organization",
-    "@id": "https://vibebunch.com/#org",
-    "name": "Vibe Bunch"
-  }
-}
-</script>
+<!-- Search engines read this to show the meeting in event results. Leave it out while
+     the next date is provisional, so search results don't list a meeting that may move.
+     Once a host confirms, add one block per date: copy the last one from this file's git
+     history and change the dates, the town and "validFrom" (the day it was announced).
+     Town only, never a street address. "performer" stays as the group itself, never a
+     person's name. -->
 
 <!-- Counts this visit for the members' visitor chart. No cookies, and nothing about you is
      kept. privacy.html says exactly what is counted. Copy this block into any new page. -->
